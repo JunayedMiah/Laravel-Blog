@@ -38,3 +38,9 @@ Route::get('view_post/{id}','PostController@view_post');
 Route::get('delete_post/{id}','PostController@delete_post');
 Route::get('edit_post/{id}','PostController@edit_post');
 Route::post('update_post/{id}','PostController@update_post');
+
+///
+
+
+Route::get('student','StudentController@student')->name('student');
+Route::post('store_student','StudentController@store_student')->name('store_student');
