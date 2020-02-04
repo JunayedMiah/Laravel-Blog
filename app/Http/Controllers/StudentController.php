@@ -39,4 +39,24 @@ class StudentController extends Controller
         return Redirect()->back()->with($notification);
     }
   }
+  public function all_student()
+  {
+    $student=Student::all();
+    return view('student.all_student',compact('student'));
+  }
+  public function view_student($id)
+  {
+    $student=Student::find($id);
+    return view('student.view_student',compact('student'));
+  }
+  public function delete_student($id)
+  {
+    $student=Student::find($id);
+    $student->delete();
+      $notification=array(
+        'message'=>'Successfully Data Deleted',
+        'alert-type'=>'success'
+      );
+      return Redirect()->back()->with($notification);
+}
 }

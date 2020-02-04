@@ -19,7 +19,7 @@
    <div class="container">
      <div class="row">
        <div class="col-lg-8 col-md-10 mx-auto">
-         <a href="#"class="btn btn-info">All Student</a>
+         <a href="{{route('all_student')}}"class="btn btn-info">All Student</a>
          <hr><br>
          <h3>New Student Insert</h3>
          @if ($errors->any())

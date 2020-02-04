@@ -44,3 +44,6 @@ Route::post('update_post/{id}','PostController@update_post');
 
 Route::get('student','StudentController@student')->name('student');
 Route::post('store_student','StudentController@store_student')->name('store_student');
+Route::get('all_student','StudentController@all_student')->name('all_student');
+Route::get('view_student/{id}','StudentController@view_student');
+Route::get('delete_student/{id}','StudentController@delete_student');
